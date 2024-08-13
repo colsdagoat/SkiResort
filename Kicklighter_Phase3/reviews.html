@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over the Ridge Vacation Rentals :: Reviews</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+                    fieldset,
+                    label {
+                      margin: 0;
+                      padding: 0;
+                    }
+                    
+                    h2 {
+                      font-size: 2em;
+                      margin: 10px;
+                    }
+                    h3 {
+                      text-align: center;
+                      font-family: Arial, Helvetica, sans-serif;
+                    }
+                    .rating {
+                      border: none;
+                      float: left;
+                    }
+                    
+                    .rating>input {
+                      display: none;
+                    }
+                    
+                    .rating>label:before {
+                      margin: 5px;
+                      font-size: 1.25em;
+                      font-family: FontAwesome;
+                      display: inline-block;
+                      content: "★";
+                    }
+                    
+                    .rating>.half:before {
+                      content: "★";
+                      position: absolute;
+                    }
+                    
+                    .rating>label {
+                      color: #fff;
+                      float: right;
+                    }
+                    
+                    .rating>input:checked~label,
+                    .rating:not(:checked)>label:hover,
+                    .rating:not(:checked)>label:hover~label {
+                      color: #ff0000;
+                    }
+
+                    .rating>input:checked+label:hover,
+                    .rating>input:checked~label:hover,
+                    .rating>label:hover~input:checked~label,
+                    .rating>input:checked~label:hover~label {
+                      color: #ff8080;
+                    }
+                    
+                    label {
+                        background-color: #81C3D7;
+                    }
+                    span {
+                        color: #ff0000;
+                        font-size: 3em;
+                    }
+                   .whitestar{
+                    color: white;
+                   }
+                   table {
+                    border-collapse: collapse;
+                    border: 1px solid #CEE5F3;
+                   }
+                   th, td {
+                    padding: 10px;
+                   }
+                   tr>:first-child {
+                    text-wrap: nowrap;
+                   }
+                   tr {
+                    text-align: center;
+                   }
+                   th {
+                    background-color: #CEE5F3;
+                    text-decoration: underline;
+                   }
+                   td {
+                    border: 1px solid #CEE5F3;
+                   }
+                   
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Book Now!
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="listing.html">Listings
+                </a>
+                <a href="schedule.html">Schedule a Trip</a>
+                <a href="amenities.html">Amenities</a>
+            </div>
+        </div>
+        <a href="fun.html">Fun Around Town</a>
+        <a href="contact.html">Contact</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="FAQ.html">FAQ</a>
+        
+    </div>
+    <header>
+        <a href="index.html"> <img src="photos/OTRLogo.png" alt="Over The Ridge Vacation Rentals Logo" height="400" width="400"></a>
+        <h1>Let us know about your stay!</h1>
+    </header> 
+
+    <div class="wrapper">
+        
+        <section class="review-form">
+            <h2>Leave a Review</h2>
+            <form action="#" method="post">
+                <label for="reviewer-name">Your Name:</label>
+                <input type="text" id="reviewer-name" name="reviewer-name" required><br>
+                <label for="rating">Your Rating:</label>
+                <div class="stars">
+                    
+                    <fieldset class="rating">
+                      <input type="radio" id="1star5" name="rating" value="5" >
+                      <label class="full" for="1star5" title="Awesome - 5 stars"></label>
+                      <input type="radio" id="1star4half" name="rating" value="4 and a half">
+                      <label class="half" for="1star4half" title="Pretty good - 4.5 stars"></label>
+                      <input type="radio" id="1star4" name="rating" value="4">
+                      <label class="full" for="1star4" title="Pretty good - 4 stars"></label>
+                      <input type="radio" id="1star3half" name="rating" value="3 and a half">
+                      <label class="half" for="1star3half" title="Meh - 3.5 stars"></label>
+                      <input type="radio" id="1star3" name="rating" value="3">
+                      <label class="full" for="1star3" title="Meh - 3 stars"></label>
+                      <input type="radio" id="1star2half" name="rating" value="2 and a half">
+                      <label class="half" for="1star2half" title="Kinda bad - 2.5 stars"></label>
+                      <input type="radio" id="1star2" name="rating" value="2">
+                      <label class="full" for="1star2" title="Kinda bad - 2 stars"></label>
+                      <input type="radio" id="1star1half" name="rating" value="1 and a half">
+                      <label class="half" for="1star1half" title="Meh - 1.5 stars"></label>
+                      <input type="radio" id="1star1" name="rating" value="1">
+                      <label class="full" for="1star1" title="Sucks big time - 1 star"></label>
+                      <input type="radio" id="1starhalf" name="rating" value="half">
+                      <label class="half" for="1starhalf" title="Sucks big time - 0.5 stars"></label>
+                    </fieldset></div><br>
+
+                <textarea name="review" id="review" placeholder="Write your review here..." required></textarea><br>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+        
+    <section>
+            <h3>Past Reviews</h3>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Review</th>
+              <th>Comment</th>
+            </tr>
+            <tr>
+              <td>Emily R.</td>
+              <td><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span></td>
+              <td>We had the most amazing time staying at Over the Ridge Vacation Rentals! The cabin was cozy and well-equipped with breathtaking views of the Blue Ridge Mountains. Will definitely be back!</td>
+            </tr>
+            <tr>
+              <td>Mark H.</td>
+              <td><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span><span class="whitestar">&#8902;</span></td>
+              <td>Great location and beautiful scenery! The cabin was clean and comfortable. We enjoyed hiking in the nearby trails and relaxing by the fireplace in the evenings.</td>
+            </tr>
+            <tr>
+              <td>Sarah M.</td>
+              <td><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span><span>&#8902;</span></td>
+              <td>Our family had a fantastic time at Over the Ridge Vacation Rentals! The staff was friendly and accommodating, and the cabin exceeded our expectations. Highly recommend!</td>
+            </tr>
+            </table>
+    </section>
+    </div>
+    <footer id="footer">
+      <p>&copy; Copyright 2024 Over The Ridge Vacation Rentals LLC.<br>
+         P.O. Box 32018234 Boone, NC 28607</p>
+      <p><a href="workcited.html" target="_blank"> Work Cited</a><br>
+          Please Come Back Soon!</p>
+      <p>Website Designed By Colson Kicklighter<br>
+          <strong>This is a fictitious website</strong></p>    
+    </footer>
+</body>
+</html>
